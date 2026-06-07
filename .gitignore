@@ -3,6 +3,9 @@
 /public/build
 /public/hot
 /public/storage
+__pycache__/
+*.py[cod]
+contacts.csv
 /storage/*.key
 /vendor
 .env

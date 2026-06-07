@@ -1,3 +1,30 @@
+# Usman Sharjeel — AgentCollect Contact Finder Submission
+
+This branch implements the current plan-first Contact Finder challenge as a small Python CLI against the mocked providers in `challenge/mocks/`. It does not call real APIs, scrape real websites, or run the legacy Laravel challenge.
+
+## Review path
+
+- `PLAN.md` was committed first, before reading `challenge/CLARIFICATIONS.md` or the mock fixtures.
+- `contact_finder/` contains the minimal Python slice.
+- `ABOUT.md` contains the requested candidate reflection.
+- `SUBMISSION.md` has the run command, test command, and process notes.
+
+## Run
+
+```bash
+python -m contact_finder --input challenge/data/companies.csv --output contacts.csv
+```
+
+## Test
+
+```bash
+python -m unittest discover -s tests -p "test_*.py"
+```
+
+The output keeps one row per input company. Contacts below the clarification threshold of `70` leave `contact_email_or_phone` empty and set `needs_human_review` to `true`.
+
+---
+
 # Respaid / AgentCollect — Hiring Challenge
 
 Welcome. This challenge is **language-agnostic** and **plan-first**. We are not testing whether you know our stack (Laravel + React). We are testing **how you think**: do you plan and ask high-value questions before you build, or do you dive straight into code?
